@@ -17,16 +17,19 @@ export default createPlugin({
 	filters: {
 		'plugin.apollo.link': {
 			key: 'apollo-link-ws',
-			value: (link: ApolloLink, _ctx: any, BB: BlueBase) => {
+			value: async (link: ApolloLink, _ctx: any, BB: BlueBase) => {
 				const wsLinkOptions = BB.Configs.getValue('plugin.apollo.wsLinkOptions');
 
-				const options: any = merge(
-					{
-						options: {
-							reconnect: true,
+				const options: any = await BB.Filters.run(
+					'plugin.apollo.wsLinkOptions',
+					merge(
+						{
+							options: {
+								reconnect: true,
+							},
 						},
-					},
-					wsLinkOptions
+						wsLinkOptions
+					)
 				);
 
 				// Create a WebSocket link:
