@@ -33,7 +33,7 @@ export default createPlugin({
 				);
 
 				// Create a WebSocket link:
-				const wsLink = new WebSocketLink(options);
+				const wsLink = await BB.Filters.run('plugin.apollo.wsLink', new WebSocketLink(options));
 
 				// using the ability to split links, you can send data to each link
 				// depending on what kind of operation is being sent
