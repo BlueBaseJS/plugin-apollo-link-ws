@@ -1,8 +1,8 @@
-import { ApolloLink, split } from 'apollo-link';
+import { ApolloLink, split } from '@apollo/client';
 import { BlueBase, createPlugin, merge } from '@bluebase/core';
 
-import { WebSocketLink } from 'apollo-link-ws';
-import { getMainDefinition } from 'apollo-utilities';
+import { WebSocketLink } from '@apollo/client/link/ws';
+import { getMainDefinition } from '@apollo/client/utilities';
 
 export default createPlugin({
 	description: 'Adds a WebSocket link to Apollo Client',
