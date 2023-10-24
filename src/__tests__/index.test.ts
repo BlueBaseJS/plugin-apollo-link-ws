@@ -8,6 +8,7 @@ import 'cross-fetch/polyfill';
 
 import { BlueBase } from '@bluebase/core';
 import BlueBasePluginApollo from '@bluebase/plugin-apollo';
+
 import Plugin from '../index';
 
 // jest.mock('apollo-cache-persist', () => ({ CachePersistor: jest.fn() }));

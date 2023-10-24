@@ -1,11 +1,10 @@
 import { ApolloLink, split } from '@apollo/client';
-import { BlueBase, createPlugin, merge } from '@bluebase/core';
-
+import { GraphQLWsLink } from '@apollo/client/link/subscriptions';
 import { getMainDefinition } from '@apollo/client/utilities';
-import { VERSION } from './version';
+import { BlueBase, createPlugin, merge } from '@bluebase/core';
+import { createClient } from 'graphql-ws';
 
-import { GraphQLWsLink } from "@apollo/client/link/subscriptions";
-import { createClient } from "graphql-ws";
+import { VERSION } from './version';
 
 export default createPlugin({
 	description: 'Adds a WebSocket link to Apollo Client',
@@ -25,14 +24,14 @@ export default createPlugin({
 
 				const options: any = await BB.Filters.run(
 					'plugin.apollo.wsLinkOptions',
-					merge(
-						{},
-						wsLinkOptions
-					)
+					merge({}, wsLinkOptions)
 				);
 
 				// Create a WebSocket link:
-				const wsLink = await BB.Filters.run('plugin.apollo.wsLink', new GraphQLWsLink(createClient(options)));
+				const wsLink = await BB.Filters.run(
+					'plugin.apollo.wsLink',
+					new GraphQLWsLink(createClient(options))
+				);
 
 				// using the ability to split links, you can send data to each link
 				// depending on what kind of operation is being sent
