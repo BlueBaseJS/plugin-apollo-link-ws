@@ -29,4 +29,3 @@
 
 -   [Storybook](https://BlueBaseJS.github.io/plugin-apollo-link-ws/storybook/)
 -   [API Docs](https://BlueBaseJS.github.io/plugin-apollo-link-ws/)
-

@@ -63,13 +63,12 @@
     "node": ">=8.9"
   },
   "dependencies": {
-    "@apollo/client": "^3.8.6",
+    "@apollo/client": "^3.8.7",
     "graphql-ws": "^5.14.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.20.0",
-    "@bluebase/cli-essentials": "^0.0.4",
     "@bluebase/code-standards": "^2.23.0",
     "@bluebase/core": "^8.2.0",
     "@bluebase/plugin-apollo": "^4.0.0",
