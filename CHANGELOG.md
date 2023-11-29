@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/BlueBaseJS/plugin-apollo-link-ws/compare/v3.0.1...v3.1.0) (2023-11-29)
+
+### Features
+
+-   Updated dependencies ([ae157fe](https://github.com/BlueBaseJS/plugin-apollo-link-ws/commit/ae157fe3db380b838d305a9d03fbdd83ace26525))
+-   Updated packages ([af557ba](https://github.com/BlueBaseJS/plugin-apollo-link-ws/commit/af557bafa35507a816182ffa5bd6815f79e1dfdc))
+
 ## [3.0.1](https://github.com/BlueBaseJS/plugin-apollo-link-ws/compare/v3.0.0...v3.0.1) (2023-10-25)
 
 ### Bug Fixes
